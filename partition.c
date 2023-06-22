@@ -1,23 +1,41 @@
 #include "sort.h"
 
 /**
-  * partition - array of integer containing two int
-  *
-  * Return: i + 1
-  */
-int partition(int arr[], int low, int high)
+ * lomuto_partition - Lomuto partition scheme for Quick sort
+ * @array: The array to be partitioned
+ * @low: The starting index of the partition
+ * @high: The ending index of the partition
+ *
+ * Return: The index of the pivot element
+ */
+int lomuto_partition(int *array, int low, int high)
 {
-	int pivot = arr[high];
+    int pivot = array[high];
+    int i = low - 1;
+    int j, temp;
 
-	int i = (low - 1);
-	for (int j = low; j <= high - 1; j++)
-	{
-		if (arr[j] < pivot)
-		{
-			i++;
-			swap(&arr[i], &arr[j]);
-		}
-	}
-	swap(&arr[i + 1], &arr[high]);
-	return (i + 1);
+    for (j = low; j <= high - 1; j++)
+    {
+        if (array[j] <= pivot)
+        {
+            i++;
+            if (i != j)
+            {
+                temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+                print_array(array, high - low + 1);
+            }
+        }
+    }
+
+    if (array[i + 1] != array[high])
+    {
+        temp = array[i + 1];
+        array[i + 1] = array[high];
+        array[high] = temp;
+        print_array(array, high - low + 1);
+    }
+
+    return (i + 1);
 }
