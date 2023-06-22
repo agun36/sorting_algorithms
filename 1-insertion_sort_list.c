@@ -17,7 +17,7 @@ void insertion_sort_list(listint_t **list)
 	{
 		listint_t* next = current->next;
 
-		while (sorted != NULL && sorted->data > current->n)
+		while (sorted != NULL && sorted->n > current->n)
 		{
 			sorted = sorted->prev;
 			swapNodes(&current, &next);
@@ -37,4 +37,5 @@ void insertion_sort_list(listint_t **list)
 		}
 
 		current = next;
+	}
 }
