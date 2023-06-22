@@ -1,19 +1,15 @@
+#include <stdio.h>
 #include "sort.h"
 
 /**
-  * quick_sort - array of int with size
-  *
-  * Return: void
-  */
+ * quick_sort - Sorts an array of integers in ascending order using the Quick sort algorithm
+ * @array: The array to be sorted
+ * @size: The size of the array
+ */
 void quick_sort(int *array, size_t size)
 {
-	size_t i;
+    if (array == NULL || size <= 1)
+        return;
 
-	if (size < i)
-	{
-		int pi = partition(array, size, i);
-
-		quick_sort(array, size, pi - 1);
-		quick_sort(array, pi + 1, i);
-	}
+    quicksort_recursive(array, 0, size - 1);
 }
