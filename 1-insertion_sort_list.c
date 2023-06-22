@@ -1,5 +1,5 @@
 #include "sort.h"
-
+#include <math.h>
 /**
   * insertion_sort_list = pointer of list
   *
@@ -7,19 +7,33 @@
   */
 void insertion_sort_list(listint_t **list)
 {
-	int i, key, j;
+	listint_t = head, current, p;
+	
+	if (list == NULL || list->next == NULL)
+		return list;
 
-	for (i = 1; i < list; i++)
+	while (list != NULL)
 	{
-		key = listint_t[i];
-		j = i - 1;
-
-		while (j >= 0 && listint_t[j] > key)
+		list = list->next;
+		if (head == NULL || current->n < head->n)
 		{
-			listint_t[j + 1] = listint[j];
-			j = j - 1;
-			print_list(list);
+			current->next = head;
+			head = current;
 		}
-		listint_t[j + 1] = key;
+		else
+		{
+			p = head;
+			while (p != NULL)
+			{
+				if p->next == NULL || current->n < p->next->n)
+				{
+					current->next = p->next;
+					p->next = current;
+					break;
+				}
+				p = p->next;
+			}
+		}
 	}
+	return (head);
 }
