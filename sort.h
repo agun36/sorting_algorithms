@@ -5,7 +5,6 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include "deck_node.h"
 #include "listint.h"
 
 /* Function prototypes */
