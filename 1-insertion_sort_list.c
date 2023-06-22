@@ -1,5 +1,5 @@
 #include "sort.h"
-#include <math.h>
+#include <stdio.h>
 
 /**
  * insertion_sort_list - Sorts a doubly linked list in ascending order
@@ -32,6 +32,9 @@ void insertion_sort_list(listint_t **list)
 		else
 		{
 			current->prev = sorted;
+			if (sorted->next != NULL)
+				sorted->next->prev = current;
+			current->next = sorted->next;
 			sorted->next = current;
 			sorted = current;
 		}
