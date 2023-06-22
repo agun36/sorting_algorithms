@@ -1,5 +1,3 @@
-#include "sort.h"
-
 /**
  * insertion_sort_list - Sorts a doubly linked list in ascending order
  * @list: Pointer to the head of the doubly linked list
@@ -19,22 +17,9 @@ void insertion_sort_list(listint_t **list)
 
 		while (temp != NULL && temp->n > current->n)
 		{
-			temp->next = current->next;
-
-			if (current->next != NULL)
-				current->next->prev = temp;
-
-			current->prev = temp->prev;
-			current->next = temp;
-			
-			if (temp->prev != NULL)
-				temp->prev->next = current;
-			else
-				*list = current;
-
-			temp->prev = current;
+			swapNodes(list, temp, current);
+			print_list((const listint_t *)*list);
 			temp = current->prev;
-			print_list(*list);
 		}
 
 		current = current->next;
