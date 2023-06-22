@@ -2,8 +2,6 @@
 #define SORT_H
 
 #include <stddef.h>
-#include "listint.h"
-#include "deck.h"
 
 /* Sorting algorithms */
 void bubble_sort(int *array, size_t size);
