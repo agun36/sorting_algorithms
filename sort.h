@@ -5,7 +5,6 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include "deck_node.h"
 #include "listint.h"
 
 /* Function prototypes */
@@ -37,9 +36,9 @@ void print_list(const listint_t *list);
  */
 typedef struct listint_s
 {
-	const int n;
-	struct listint_s *prev;
-	struct listint_s *next;
+    const int n;
+    struct listint_s *prev;
+    struct listint_s *next;
 } listint_t;
 
 /* swap function */
