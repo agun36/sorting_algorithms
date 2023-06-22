@@ -9,7 +9,7 @@
   */
 void bubble_sort(int *array, size_t size)
 {
-	long unsigned int i, j;
+	size_t i, j;
 	bool swapped;
 
 	for (i = 0; i < size - 1; i++)
