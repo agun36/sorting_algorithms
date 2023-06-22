@@ -5,6 +5,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include "deck_node.h"
 #include "listint.h"
 
 /* Function prototypes */
@@ -22,7 +23,7 @@ void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
 void sort_deck(deck_node_t **deck);
 
-/*Data structure and Functions*/
+/* Data structure and Functions */
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 
@@ -41,7 +42,7 @@ typedef struct listint_s
     struct listint_s *next;
 } listint_t;
 
-/* swap function */
+/* Swap function */
 void swap(int *xp, int *yp);
 
 #endif /* SORT_H */
