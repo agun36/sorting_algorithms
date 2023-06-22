@@ -3,10 +3,12 @@
 
 /**
   * swap - contains two pointers of integer
+  *
+  * Return: void
+  */
 void swap(int *xp, int *yp)
 {
 	int temp = *xp;
 	*xp = *yp;
 	*yp = temp;
-
 }

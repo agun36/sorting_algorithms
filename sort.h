@@ -1,7 +1,12 @@
 #ifndef SORT_H
 #define SORT_H
 
+/* Header function */
 #include <stddef.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include "deck.h"
+#include <stdio.h>
 
 /**
  * struct listint_s - Doubly linked list node
@@ -35,5 +40,8 @@ void sort_deck(deck_node_t **deck);
 /* Data structure and Functions */
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
+
+/*swap function*/
+void swap(int *xp, int *yp);
 
 #endif /* SORT_H */
