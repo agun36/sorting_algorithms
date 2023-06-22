@@ -1,3 +1,5 @@
+#include "sort.h"
+#include <stdio.h>
 /**
  * quicksort_recursive - Recursive helper function for quick_sort
  * @array: The array to be sorted
