@@ -14,7 +14,5 @@ void quicksort_recursive(int *array, int low, int high)
 		
 		quicksort_recursive(array, low, pi - 1);
 		quicksort_recursive(array, pi + 1, high);
-		
-		print_array(array + low, high - low + 1);
     }
 }
