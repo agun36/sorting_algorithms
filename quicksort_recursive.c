@@ -8,11 +8,13 @@
  */
 void quicksort_recursive(int *array, int low, int high)
 {
-    if (low < high)
-    {
-        int pi = lomuto_partition(array, low, high);
-
-        quicksort_recursive(array, low, pi - 1);
-        quicksort_recursive(array, pi + 1, high);
+	if (low < high)
+	{
+		int pi = lomuto_partition(array, low, high);
+		
+		quicksort_recursive(array, low, pi - 1);
+		quicksort_recursive(array, pi + 1, high);
+		
+		print_array(array + low, high - low + 1);
     }
 }
