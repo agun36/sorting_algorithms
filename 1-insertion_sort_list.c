@@ -20,12 +20,12 @@ void insertion_sort_list(listint_t **list)
 		while (sorted != NULL && sorted->data > current->n)
 		{
 			sorted = sorted->prev;
-			swap_nodes(&current. &next);
+			swapNodes(&current, &next);
 		}
 		
 		if (sorted == NULL)
 		{
-			*head = current;
+			*list = current;
 			sorted = current;
 		}
 		else
