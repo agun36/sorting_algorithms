@@ -44,4 +44,6 @@ void print_list(const listint_t *list);
 /*swap function*/
 void swap(int *xp, int *yp);
 void swapNodes(listint_t **list, listint_t *node1, listint_t *node2);
+/* partition */
+int partition(int arr[], int low, int high);
 #endif /* SORT_H */
