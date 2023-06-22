@@ -21,17 +21,16 @@ int lomuto_partition(int *array, int low, int high)
 			i++;
 			if (i != j)
 			{
-				swap(&array[i], &array[j]);
-				print_array(array, high - low + 1);
+				int temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
 			}
 		}
 	}
 	
-	if (array[i + 1] != array[high])
-	{
-		swap(&array[i + 1], &array[high]);
-		print_array(array, high - low + 1);
-	}
+	int temp = array[i + 1];
+	array[i + 1] = array[high];
+	array[high] = temp;
 
-	return (i - 1);
+	return (i + 1);
 }
