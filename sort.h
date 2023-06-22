@@ -26,7 +26,6 @@ typedef struct listint_s
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
-void quick_sort(int *array, size_t size);
 void shell_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
 void counting_sort(int *array, size_t size);
@@ -40,7 +39,10 @@ void sort_deck(deck_node_t **deck);
 /* Data structure and Functions */
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
-
+/*Quick_sort Function*/
+void quick_sort(int *array, size_t size);
+void quick_sort(int *array, size_t size);
+void quicksort_recursive(int *array, int low, int high);
 /*swap function*/
 void swap(int *xp, int *yp);
 void swapNodes(listint_t **list, listint_t *node1, listint_t *node2);
