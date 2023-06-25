@@ -59,6 +59,6 @@ void max_heap(int *array, int size, int base, int i);
 void merge_bit(int *array, size_t size, size_t low, size_t n,
 		char direction);
 void bitonicSort(int *array, size_t size, size_t low, size_t n, char direction);
-void quick_sort(int *array, ssize_t low, ssize_t high, int size);
+void quick_sort_h(int *array, ssize_t low, ssize_t high, int size);
 int q_partition(int *array, int low, int high, int size);
 #endif /* SORT_H */
