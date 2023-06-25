@@ -2,7 +2,6 @@
 
 /**
  * swap - contains two pointers of integer xp and yp
- *
  * @xp: return pointer integer
  * @yp: return second pointer integer
  * Return: void
@@ -20,7 +19,6 @@ void swap(int *xp, int *yp)
  * the Bubble Sort algorithm
  * @array: pointer to the array to be sorted
  * @size: size of the array
- *
  * Return: void
  */
 void bubble_sort(int *array, size_t size)
