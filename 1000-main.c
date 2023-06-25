@@ -42,7 +42,7 @@ deck_node_t *init_deck(const card_t cards[52])
     }
     return (deck);
 }
-
+void sort_deck(deck_node_t **deck);
 int main(void)
 {
     card_t cards[52] = {
