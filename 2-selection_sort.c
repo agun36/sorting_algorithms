@@ -1,7 +1,8 @@
 #include "sort.h"
 /**
   * selection_sort - sort  array of integer in ascending order
-  *
+  * @size: size of array
+  * @array: list with numbers
   * Return: void
   */
 void selection_sort(int *array, size_t size)
