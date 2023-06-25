@@ -35,7 +35,7 @@ void swap_node_head(listint_t **list, listint_t **tail, listint_t **jump)
  */
 void swap_node_tail(listint_t **list, listint_t **tail, listint_t **jump)
 {
-	listint_t *temp = (*shaker)->prev;
+	listint_t *temp = (*jump)->prev;
 
 	if ((*jump)->next != NULL)
 		(*jump)->next->prev = temp;
