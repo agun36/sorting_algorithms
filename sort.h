@@ -49,6 +49,20 @@ void swap(int *xp, int *yp);
 void swapNodes(listint_t **head, listint_t **node1, listint_t *node2);
 /* partition */
 int partition(int arr[], int low, int high);
+/* Comparison direction macros for bitonic sort */
+#define UP 0
+#define DOWN 1
+
+/**
+ * enum bool - Enumeration of Boolean values.
+ * @false: Equals 0.
+ * @true: Equals 1.
+ */
+typedef enum bool
+{
+	false = 0,
+	true
+} bool;
 
 void swap_node_head(listint_t **list, listint_t **tail, listint_t **jump);
 int maxNum(const int *array, size_t size);
