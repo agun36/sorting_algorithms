@@ -1,6 +1,4 @@
-#include <stdio.h>
 #include "sort.h"
-void quicksort_recursive(int *array, int low, int high);
 /**
  * lomuto_partition - Lomuto partition scheme for Quick sort
  * @array: The array to be partitioned
@@ -55,7 +53,7 @@ void quicksort_recursive(int *array, int low, int high)
 		pi = lomuto_partition(array, size, low, high);
 		quicksort_recursive(array, size, low, pi - 1);
 		quicksort_recursive(array, size, pi + 1, high);
-    }
+	}
 }
 /**
  * quick_sort - Sorts an array of integers in ascending order using the Quick sort algorithm
