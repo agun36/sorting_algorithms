@@ -55,5 +55,10 @@ int maxNum(const int *array, size_t size);
 void merge(int *array, int *output, size_t low, size_t mid, size_t high);
 void mergeSort(int *array, int *output, int low, int high);
 void swap_node_tail(listint_t **list, listint_t **tail, listint_t **jump);
-void max_heap(int *array, int size, int base, int i)
+void max_heap(int *array, int size, int base, int i);
+void merge_bit(int *array, size_t size, size_t low, size_t n,
+		char direction);
+void bitonicSort(int *array, size_t size, size_t low, size_t n, char direction);
+void quick_sort(int *array, ssize_t low, ssize_t high, int size);
+int q_partition(int *array, int low, int high, int size);
 #endif /* SORT_H */
