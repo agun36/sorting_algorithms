@@ -26,24 +26,27 @@ int compare_cards(const void *a, const void *b)
  */
 void sort_deck(deck_node_t **deck)
 {
-	size_t deck_size = 52;
-	deck_node_t *current = *deck;
-	card_t *cards[52];
-	size_t i = 0;
+	int swapped;
+	deck_node_t *ptr1;
+	deck_node_t *lptr = NULL;
 	
-	while (current != NULL)
+	if (*deck == NULL)
+		return;
+	
+	do
 	{
-		cards[i] = (card_t *)current->card;
-		current = current->next;
-		i++;
-    }
-
-    qsort(cards, deck_size, sizeof(card_t *), compare_cards);
-
-    current = *deck;
-    for (i = 0; i < deck_size; i++)
-    {
-        current->card = cards[i];
-        current = current->next;
-    }
+		swapped = 0;
+		ptr1 = *deck;
+		
+		while (ptr1->next != lptr)
+		{
+			if (card_value(ptr1->card) > card_value(ptr1->next->card))
+			{
+				swap_cards(ptr1, ptr1->next);
+				swapped = 1;
+			}
+			ptr1 = ptr1->next;
+		}
+		lptr = ptr1;
+	} while (swapped);
 }
