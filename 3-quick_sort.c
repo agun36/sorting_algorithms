@@ -36,6 +36,7 @@ int lomuto_partition(int *array, size_t size, int low, int high)
 	}
 	return (i);
 }
+
 /**
  * quicksort_recursive - Recursive helper function for quick_sort
  * @array: The array to be sorted
@@ -54,6 +55,7 @@ void quicksort_recursive(int *array, size_t size, int low, int high)
 		quicksort_recursive(array, size, pi + 1, high);
 	}
 }
+
 /**
  * quick_sort - Sorts an array of integers in ascending order
  * @array: The array to be sorted
