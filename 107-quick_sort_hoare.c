@@ -1,4 +1,5 @@
 #include "sort.h"
+
 /**
  *q_partition - hoare partition sorting scheme implementation
  *@array: array
@@ -30,6 +31,7 @@ int q_partition(int *array, int low, int high, int size)
 		print_array(array, size);
 	}
 }
+
 /**
  *quick_sort_h - quck_sort algorithm implementation
  *@array: array
@@ -48,6 +50,7 @@ void quick_sort_h(int *array, ssize_t low, ssize_t high, int size)
 		quick_sort_h(array, position, high, size);
 	}
 }
+
 /**
  *quick_sort_hoare - prepare the terrain to quicksort algorithm
  *@array: array
