@@ -48,7 +48,7 @@ void sort_deck(deck_node_t **deck);
 typedef enum bool
 {
 	false = 0,
-	true
+	true = 1
 } bool;
 
 /* Data structure and Functions */
