@@ -7,7 +7,8 @@
  */
 void shell_sort(int *array, size_t size)
 {
-	size_t step, i, j, temp;
+	size_t step, i, j;
+	size_t temp;
 
 	if (array == NULL || size < 2)
 		return;
