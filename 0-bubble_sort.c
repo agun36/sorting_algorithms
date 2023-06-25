@@ -1,5 +1,4 @@
 #include "sort.h"
-#include <stdio.h>
 
 /**
  * swap - contains two pointers of integer xp and yp
@@ -16,7 +15,6 @@ void swap(int *xp, int *yp)
 	*xp = *yp;
 	*yp = temp;
 }
-
 /**
  * bubble_sort - sorts an array of integers in ascending order using
  * the Bubble Sort algorithm
