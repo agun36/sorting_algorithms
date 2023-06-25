@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "sort.h"
+void quicksort_recursive(int *array, int low, int high);
 /**
  * lomuto_partition - Lomuto partition scheme for Quick sort
  * @array: The array to be partitioned
