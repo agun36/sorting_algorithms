@@ -58,11 +58,11 @@ int partition(int arr[], int low, int high);
  * @false: Equals 0.
  * @true: Equals 1.
  */
-typedef enum bool
+typedef enum Boolean
 {
 	False = 0,
 	True
-} bool;
+} Boolean;
 
 void swap_node_head(listint_t **list, listint_t **tail, listint_t **jump);
 int maxNum(const int *array, size_t size);
