@@ -48,7 +48,7 @@ void bitonicSort(int *array, size_t size, size_t low, size_t n, char direction)
 
 		bitonicSort(array, size, low, distance, UP);
 		bitonicSort(array, size, low + distance, distance, DOWN);
-		merge(array, size, low, n, direction);
+		merge_bit(array, size, low, n, direction);
 
 		printf("Result [%lu/%lu] (%s):\n", n, size, str);
 		print_array(array + low, n);
