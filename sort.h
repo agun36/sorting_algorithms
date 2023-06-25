@@ -49,4 +49,7 @@ void swap(int *xp, int *yp);
 void swapNodes(listint_t **head, listint_t **node1, listint_t *node2);
 /* partition */
 int partition(int arr[], int low, int high);
+
+void swap_node_head(listint_t **list, listint_t **tail, listint_t **jump);
+void swap_node_tail(listint_t **list, listint_t **tail, listint_t **jump);
 #endif /* SORT_H */
