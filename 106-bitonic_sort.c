@@ -8,7 +8,7 @@
  * @direction: The direction to sort in.
  */
 void merge_bit(int *array, size_t size, size_t low, size_t n,
-		char direction);
+		char direction)
 {
 	size_t i, distance = n / 2, temp;
 
