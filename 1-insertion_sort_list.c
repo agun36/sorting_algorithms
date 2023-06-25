@@ -32,18 +32,16 @@ void insertion_sort_list(listint_t **list)
 		return;
 
 	current = (*list)->next;
-
 	while (current != NULL)
 	{
-		temp = current->prev;
-		insert = current;
-
-		while (temp != NULL && temp->n > insert->n)
+		temp = current->next;
+		insert = current->prev;
+		while (insert != NULL && current->n < insert->n)
 		{
-			swapNodes(list, &temp, insert);
+			swapNodes(list, &insert, current);
 			print_list((const listint_t *)*list);
 			temp = insert->prev;
 		}
-		current = current->next;
+		current = temp;
 	}
 }
