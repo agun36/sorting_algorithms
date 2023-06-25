@@ -60,8 +60,8 @@ int partition(int arr[], int low, int high);
  */
 typedef enum bool
 {
-	false = 0,
-	true
+	False = 0,
+	True
 } bool;
 
 void swap_node_head(listint_t **list, listint_t **tail, listint_t **jump);
