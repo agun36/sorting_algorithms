@@ -1,14 +1,14 @@
 #include "sort.h"
 /**
- * merge - sort bitonic sequences recursively in both orders
+ * merge_bit - sort bitonic sequences recursively in both orders
  * @array: array
  * @size: size of the array
  * @low: first element
  * @n: The size of the sequence to sort.
  * @direction: The direction to sort in.
  */
-void merge(int *array, size_t size, size_t low, size_t n,
-		char direction)
+void merge_bit(int *array, size_t size, size_t low, size_t n,
+		char direction);
 {
 	size_t i, distance = n / 2, temp;
 
