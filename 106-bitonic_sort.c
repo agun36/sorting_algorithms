@@ -24,8 +24,8 @@ void merge_bit(int *array, size_t size, size_t low, size_t n,
 				array[i + distance] = temp;
 			}
 		}
-		merge(array, size, low, distance, direction);
-		merge(array, size, low + distance, distance, direction);
+		merge_bit(array, size, low, distance, direction);
+		merge_bit(array, size, low + distance, distance, direction);
 	}
 }
 /**
