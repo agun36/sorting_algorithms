@@ -31,21 +31,21 @@ int q_partition(int *array, int low, int high, int size)
 	}
 }
 /**
- *quick_sort - quck_sort algorithm implementation
+ *quick_sort_h - quck_sort algorithm implementation
  *@array: array
  *@low: first array index
  *@high: last array index
  *@size: array size
  */
-void quick_sort(int *array, ssize_t low, ssize_t high, int size)
+void quick_sort_h(int *array, ssize_t low, ssize_t high, int size)
 {
 	ssize_t position = 0;
 
 	if (low < high)
 	{
 		position = q_partition(array, low, high, size);
-		quick_sort(array, low, position - 1, size);
-		quick_sort(array, position, high, size);
+		quick_sort_h(array, low, position - 1, size);
+		quick_sort_h(array, position, high, size);
 	}
 }
 /**
@@ -57,5 +57,5 @@ void quick_sort_hoare(int *array, size_t size)
 {
 	if (!array || size < 2)
 		return;
-	quick_sort(array, 0, size - 1, size);
+	quick_sort_h(array, 0, size - 1, size);
 }
