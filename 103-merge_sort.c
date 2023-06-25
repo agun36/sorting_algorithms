@@ -46,8 +46,8 @@ void mergeSort(int *array, int *output, int low, int high)
 	if (high - low > 1)
 	{
 		middle = low + (high - low) / 2;
-		mergesort(array, output, low, middle);
-		mergesort(array, output, middle, high);
+		mergeSort(array, output, low, middle);
+		mergeSort(array, output, middle, high);
 		merge(array, output, low, middle, high);
 	}
 }
