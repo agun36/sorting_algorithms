@@ -44,7 +44,7 @@ int lomuto_partition(int *array, size_t size, int low, int high)
  * @low: The starting index of the partition to be sorted
  * @high: The ending index of the partition to be sorted
  */
-void quicksort_recursive(int *array, int low, int high)
+void quicksort_recursive(int *array, size_t size, int low, int high)
 {
 	int pi;
 
