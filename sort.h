@@ -46,7 +46,7 @@ int lomuto_partition(int *array, int low, int high);
 void quicksort_recursive(int *array, int low, int high);
 /*swap function*/
 void swap(int *xp, int *yp);
-void swapNodes(listint_t **list, listint_t *node1, listint_t *node2);
+void swapNodes(listint_t **head, listint_t **node1, listint_t *node2);
 /* partition */
 int partition(int arr[], int low, int high);
 #endif /* SORT_H */
