@@ -52,5 +52,7 @@ int partition(int arr[], int low, int high);
 
 void swap_node_head(listint_t **list, listint_t **tail, listint_t **jump);
 int maxNum(const int *array, size_t size);
+void merge(int *array, int *output, size_t low, size_t mid, size_t high);
+void mergesort(int *array, int *output, int low, int high);
 void swap_node_tail(listint_t **list, listint_t **tail, listint_t **jump);
 #endif /* SORT_H */
