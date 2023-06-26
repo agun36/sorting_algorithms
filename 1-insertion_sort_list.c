@@ -2,7 +2,7 @@
 
 /**
  * swap_nodes - Swap two nodes in a listint_t doubly-linked list.
- * @h: A pointer to the head of the doubly-linked list.
+ * @head: A pointer to the head of the doubly-linked list.
  * @node1: A pointer to the first node to swap.
  * @node2: The second node to swap.
  */
