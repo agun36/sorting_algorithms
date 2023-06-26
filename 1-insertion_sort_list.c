@@ -1,47 +1,30 @@
 #include "sort.h"
-
 /**
- * swap_nodes - Swap two nodes in a listint_t doubly-linked list.
- * @head: A pointer to the head of the doubly-linked list.
- * @node1: A pointer to the first node to swap.
- * @node2: The second node to swap.
+ * bubble_sort - sort array lements from min to max value
+ * @array: array
+ * @size: array size
  */
-void swap_nodes(listint_t **head, listint_t **node1, listint_t *node2)
+void bubble_sort(int *array, size_t size)
 {
-	(*node1)->next = node2->next;
-	if (node2->next != NULL)
-		node2->next->prev = *node1;
-	node2->prev = (*node1)->prev;
-	node2->next = *node1;
-	if ((*node1)->prev != NULL)
-		(*node1)->prev->next = node2;
-	else
-		*head = node2;
-	(*node1)->prev = node2;
-	*node1 = node2->prev;
-}
-/**
- * insertion_sort_list - Sorts a doubly linked list of integers
- *                       using the insertion sort algorithm.
- * @list: A pointer to the head of a doubly-linked list of integers.
- *
- * Description: Prints the list after each swap.
- */
-void insertion_sort_list(listint_t **list)
-{
-	listint_t *count, *insert, *tmp;
+	size_t i, j, swagged, temp;
 
-	if (list == NULL || *list == NULL || (*list)->next == NULL)
+	if (array == NULL || size < 2)
 		return;
-
-	for (count = (*list)->next; count != NULL; count = tmp)
+	for (i = 0; i < size - 1; i++)
 	{
-		tmp = count->next;
-		insert = count->prev;
-		while (insert != NULL && count->n < insert->n)
+		swagged = 0;
+		for (j = 0; j < size - 1 - i; j++)
 		{
-			swap_nodes(list, &insert, count);
-			print_list((const listint_t *)*list);
+			if (array[j] > array[j + 1])
+			{
+				temp = array[j];
+				array[j] = array[j + 1];
+				array[j + 1] = temp;
+				swagged = 1;
+				print_array(array, size);
+			}
 		}
+		if (swagged == 0)
+			break;
 	}
 }
