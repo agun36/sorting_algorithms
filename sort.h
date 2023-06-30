@@ -18,9 +18,9 @@
  */
 typedef struct listint_s
 {
-    const int n;
-    struct listint_s *prev;
-    struct listint_s *next;
+	const int n;
+	struct listint_s *prev;
+	struct listint_s *next;
 } listint_t;
 
 /* Sorting algorithms */
@@ -54,9 +54,9 @@ int partition(int arr[], int low, int high);
 #define DOWN 1
 
 /**
- * enum bool - Enumeration of Boolean values.
- * @false: Equals 0.
- * @true: Equals 1.
+ * enum Boolean - Enumeration of Boolean values.
+ * @False: Equals 0.
+ * @True: Equals 1.
  */
 typedef enum Boolean
 {
